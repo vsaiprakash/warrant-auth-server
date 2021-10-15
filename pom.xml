@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.vsaiprakash</groupId>
-	<artifactId>warrent-auth-server</artifactId>
+	<artifactId>warrant-auth-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>warrent-auth-server</name>
+	<name>warrant-auth-server</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>

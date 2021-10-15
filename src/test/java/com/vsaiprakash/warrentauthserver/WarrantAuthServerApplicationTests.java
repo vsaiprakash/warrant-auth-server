@@ -1,10 +1,10 @@
-package com.vsaiprakash.warrentauthserver;
+package com.vsaiprakash.warrantauthserver;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class WarrentAuthServerApplicationTests {
+class WarrantAuthServerApplicationTests {
 
 	@Test
 	void contextLoads() {
