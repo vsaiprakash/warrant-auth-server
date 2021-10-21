@@ -1,6 +1,8 @@
 package com.vsaiprakash.warrantauthserver.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
@@ -24,7 +26,7 @@ public class AuthServerController {
         Client Credentials Flow
     */
 
-    // ------------------ Auth Code Flow for User Login -----------------
+    // ------------------ Plain Auth Code Flow for User Login -----------------
 
 	@GetMapping(value = "/authorize", params = "grant_type=authorization_code")
 	public String authorizationCodeGrant(Model model) {
@@ -40,7 +42,7 @@ public class AuthServerController {
 		return "token response for authorization code flow";
 	}
 
-    // ------------------ Client Credentials Flow ------------------------
+    // ------------------ Plain Client Credentials Flow ------------------------
 
 	@GetMapping(value = "/authorize", params = "grant_type=client_credentials")
 	public String clientCredentialsGrant() {
