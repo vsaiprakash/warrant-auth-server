@@ -12,18 +12,21 @@ public class AuthServerController {
     // ------ Basic Controller -----------
 
 	@GetMapping("/")
-	public String root() {
+	public String root(Model model) {
 		return "redirect:/index";
 	}
 
+	// this will cause Circular reference exception
 	@GetMapping("/index")
-	public String index() {
-		return "index";
+	public String index(Model model) {
+		return "intro"; //using intro instead of index to avoid circular ref exception
 	}
 
     /*
-        Authorization Code Flow
-        Client Credentials Flow
+		Supported OAuth2 Flows:-
+		=========================
+        ● Authorization Code Flow
+        ● Client Credentials Flow
     */
 
     // ------------------ Plain Auth Code Flow for User Login -----------------
