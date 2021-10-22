@@ -1,12 +1,15 @@
 package com.vsaiprakash.warrantauthserver.web;
 
-import org.springframework.stereotype.Controller;
+// import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
+@RestController
+@RequestMapping("/auth")
 public class AuthServerController {
     
     // ------ Basic Controller -----------
@@ -47,10 +50,17 @@ public class AuthServerController {
 
     // ------------------ Plain Client Credentials Flow ------------------------
 
-	@GetMapping(value = "/authorize", params = "grant_type=client_credentials")
-	public String clientCredentialsGrant() {
+	// @GetMapping(value = "/authorize", params = "grant_type=client_credentials")
+	// public String clientCredentialsGrant() {
 
-		return "token response for client credentials flow";
+	// 	return "token response for client credentials flow";
+	// }
+
+	@PostMapping(value = "/oauth/token")
+	public String tokenRequest(Model model) {
+
+		System.out.println("post /oauth/token called");
+		return "token creds";
 	}
 
 
