@@ -1,13 +1,23 @@
 package com.vsaiprakash.warrantauthserver.services;
 
 import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialResponse;
+import com.vsaiprakash.warrantauthserver.dao.AppsDao;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
 public class ClientCredentialFlowService {
-    public static ClientCredentialResponse processFlow(String client_id, String client_secret){
 
+    @Autowired
+    AppsDao appDao;
+
+    public ClientCredentialResponse processFlow(String client_id, String client_secret, String[] scopes){
+        
         //validate app with client id & client secret
 
-        //generate a token and update it in DB of app for ref
+
+        //generate a token and update it in DB of app scope table for ref
         final String tokenGenerated = "";
 
         //enforce the token expiry somehow ? for know take it as fixed

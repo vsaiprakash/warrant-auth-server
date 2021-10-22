@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 // import org.springframework.web.servlet.view.RedirectView;
 
 import org.springframework.web.util.UriComponentsBuilder;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 
 import com.vsaiprakash.warrantauthserver.model.requestmodels.TokenRequest;
@@ -29,6 +29,9 @@ import com.vsaiprakash.warrantauthserver.services.ClientCredentialFlowService;
 @RestController
 @RequestMapping("/oauth2")
 public class AuthServerController {
+
+	@Autowired
+	ClientCredentialFlowService ccfService;
     
     /*
 		https://auth0.com/docs/authorization/protocols/protocol-oauth2
@@ -97,8 +100,16 @@ public class AuthServerController {
 				"expires_in":86400
 			}
 		*/
+		String[] scopes = null;
+		if(scope==null) {
+			scopes = new String[0];
+		}
+		else {
+			scopes = scope.trim().split(" ");
+		}
 
-		return ClientCredentialFlowService.processFlow(client_id, client_secret);
+
+		return ccfService.processFlow(client_id, client_secret, scopes);
 	}
 
 	// Token Introspection Endpoint
@@ -110,8 +121,8 @@ public class AuthServerController {
 				)
 	public TokenIntrospectionResponse tokenIntrospect(
 		//@RequestBody won't recognize application/x-www-form-urlencoded
-		TokenRequest token
-		// ,@RequestHeader("Authorization") String bearerToken //to keep endpoint secure
+		TokenRequest token,
+		@RequestHeader("Authorization") String bearerToken //to keep endpoint secure
 	) {
 
 		/*
