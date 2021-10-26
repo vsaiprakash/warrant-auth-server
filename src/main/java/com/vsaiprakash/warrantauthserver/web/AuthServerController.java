@@ -42,18 +42,6 @@ public class AuthServerController {
         ● Client Credentials Flow
     */
 
-	// @GetMapping("/index")
-    // public ModelAndView welcome() {
-    //     ModelAndView modelAndView = new ModelAndView();
-    //     modelAndView.setViewName("index.html");
-    //     return modelAndView;
-    // }
-
-	// @GetMapping("/")
-    // public RedirectView redirectRoot() {
-    //     return new RedirectView("/index");
-    // }
-
 	@GetMapping(value = "/authorize",
 				produces = MediaType.APPLICATION_JSON_VALUE)
 	public String authorize(
