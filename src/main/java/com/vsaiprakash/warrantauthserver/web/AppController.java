@@ -27,7 +27,7 @@ import com.vsaiprakash.warrantauthserver.services.ClientCredentialFlowService;
 // import org.springframework.web.context.request.WebRequest;
 
 @RestController
-@RequestMapping("/app")
+// @RequestMapping("/app")
 public class AppController {
     
     //app registration endpoint
@@ -35,6 +35,13 @@ public class AppController {
     public ModelAndView appRegistrationPage() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("app-registration.html");
+        return modelAndView;
+    }
+
+    @GetMapping("/login")
+    public ModelAndView loginPage() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("login.html");
         return modelAndView;
     }
 
@@ -47,12 +54,12 @@ public class AppController {
 
 	@GetMapping("/")
     public RedirectView redirectRoot1() {
-        return new RedirectView("/app/index");
+        return new RedirectView("/index");
     }
 
     @GetMapping("")
     public RedirectView redirectRoot2() {
-        return new RedirectView("/app/index");
+        return new RedirectView("/index");
     }
 
     //
