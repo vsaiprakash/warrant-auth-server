@@ -1,6 +1,11 @@
 package com.vsaiprakash.warrantauthserver.dao;
 
-import org.springframework.stereotype.Service;
+// import org.springframework.stereotype.Service;
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;
+import java.util.Optional;
+
+import com.vsaiprakash.warrantauthserver.model.dbmodels.OAuthScope;
 
 /*
     https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/
@@ -12,8 +17,7 @@ import org.springframework.stereotype.Service;
         Mobile app
 */
 
-@Service
-public class AppsDao {
+public interface OAuthScopeRepository extends CrudRepository<OAuthScope, String> {
     //Connect with DB for App details
     /*
             String appName, [no spaces, only small letters, hypens, UNIQUE in table like an ID]
@@ -26,26 +30,10 @@ public class AppsDao {
             String GrantTypeSupported = "client_credentials" [FIXED]
     */
 
-    void getAppByClientIdSecret() {
+    
+  List<OAuthScope> findByScope(String scope);
 
-    }
+  Optional<OAuthScope> findById(String id);
 
-    public boolean registerApp(
-        String appName,
-        String appHomeUrl,
-        String appDescription,
-        String appPrivacyPolicyLink,
-        String[] redirectUrls
-    ) {
-        /*
-            Application name
-            An icon for the application
-            URL to the application’s home page
-            A short description of the application
-            A link to the application’s privacy policy
-            A list of redirect URLs
-        */
-
-        return false;
-    }
+  // OAuthScope findByScope(String scope);
 }

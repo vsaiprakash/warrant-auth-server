@@ -1,7 +1,7 @@
 package com.vsaiprakash.warrantauthserver.services;
 
 import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialResponse;
-import com.vsaiprakash.warrantauthserver.dao.AppsDao;
+import com.vsaiprakash.warrantauthserver.dao.OAuthClientRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 public class ClientCredentialFlowService {
 
     @Autowired
-    AppsDao appDao;
+    OAuthClientRepository appDao;
 
     public ClientCredentialResponse processFlow(String client_id, String client_secret, String[] scopes){
         

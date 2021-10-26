@@ -24,6 +24,9 @@ import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialRe
 import com.vsaiprakash.warrantauthserver.model.responsemodels.TokenIntrospectionResponse;
 import com.vsaiprakash.warrantauthserver.services.ClientCredentialFlowService;
 
+import com.vsaiprakash.warrantauthserver.dao.OAuthClientRepository;
+import com.vsaiprakash.warrantauthserver.dao.OAuthScopeRepository;
+
 // import org.springframework.web.context.request.WebRequest;
 
 @RestController
@@ -32,6 +35,17 @@ public class AuthServerController {
 
 	@Autowired
 	ClientCredentialFlowService ccfService;
+
+	@Autowired
+	OAuthScopeRepository repo1;
+
+	@GetMapping(value="/dummy")
+	public String dummy(){
+		
+		System.out.println("Dummy called"+repo1.findByScope("read"));
+		
+		return repo1.findByScope("read").toString();
+	}
     
     /*
 		https://auth0.com/docs/authorization/protocols/protocol-oauth2
