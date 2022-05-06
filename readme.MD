@@ -86,7 +86,7 @@ Pragma: no-cache
   "scope":"create"
 }
 
-Flow Diagram
+Flow Diagram ( https://github.com/vsaiprakash/warrant-auth-server/blob/main/notes/clientCredentialFlow.drawio )
 
 ![image](https://user-images.githubusercontent.com/9028439/167181326-bcf7a225-25e3-43ec-be8d-2a67619c8f5c.png)
 <!-- <img width="431" alt="image" src="https://user-images.githubusercontent.com/9028439/167181326-bcf7a225-25e3-43ec-be8d-2a67619c8f5c.png"> -->
