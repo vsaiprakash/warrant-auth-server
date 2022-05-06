@@ -24,7 +24,7 @@ import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialRe
 import com.vsaiprakash.warrantauthserver.model.responsemodels.TokenIntrospectionResponse;
 import com.vsaiprakash.warrantauthserver.services.ClientCredentialFlowService;
 
-import com.vsaiprakash.warrantauthserver.dao.OAuthClientRepository;
+// import com.vsaiprakash.warrantauthserver.dao.OAuthClientRepository;
 import com.vsaiprakash.warrantauthserver.dao.OAuthScopeRepository;
 
 // import org.springframework.web.context.request.WebRequest;
@@ -83,8 +83,8 @@ public class AuthServerController {
 		// check if user already logged in
 
         // if not logged, redirect to /login page and get creds
-		if(false)
-			return new RedirectView("/login");
+		// if(false)
+		// 	return new RedirectView("/login");
 
         // once logged in redirect to authorize app url
 
