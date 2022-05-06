@@ -122,10 +122,13 @@ public class AuthServerController {
 		@RequestParam String grant_type,
 		@RequestParam String client_id,
 		@RequestParam String client_secret,
+		@RequestParam String audience,
 		@RequestParam (required = false) String scope
 	) {
 
 		/*
+			Reference: https://auth0.com/docs/api/authentication?http#client-credentials-flow
+
 			HTTP/1.1 200 OK
 			Content-Type: application/json
 			{
@@ -142,8 +145,7 @@ public class AuthServerController {
 			scopes = scope.trim().split(" ");
 		}
 
-
-		return ccfService.processFlow(client_id, client_secret, scopes);
+		return ccfService.processFlow(client_id, client_secret, audience, scopes);
 	}
 
 	// Token Introspection Endpoint
