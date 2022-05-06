@@ -85,3 +85,8 @@ Pragma: no-cache
   "refresh_token":"IwOGYzYTlmM2YxOTQ5MGE3YmNmMDFkNTVk",
   "scope":"create"
 }
+
+Flow Diagram
+
+![image](https://user-images.githubusercontent.com/9028439/167181326-bcf7a225-25e3-43ec-be8d-2a67619c8f5c.png)
+<!-- <img width="431" alt="image" src="https://user-images.githubusercontent.com/9028439/167181326-bcf7a225-25e3-43ec-be8d-2a67619c8f5c.png"> -->
