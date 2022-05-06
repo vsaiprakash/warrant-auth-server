@@ -13,7 +13,6 @@ import org.springframework.http.MediaType;
 
 import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialResponse;
 import com.vsaiprakash.warrantauthserver.services.ClientCredentialFlowService;
-import com.vsaiprakash.warrantauthserver.dao.OAuthScopeRepository;
 
 @RestController
 @RequestMapping("/v1/oauth")
@@ -22,15 +21,12 @@ public class AuthServerController {
 	@Autowired
 	ClientCredentialFlowService ccfService;
 
-	@Autowired
-	OAuthScopeRepository repo1;
-
 	@GetMapping(value="/dummy")
 	public String dummy(){
 		
-		System.out.println("Dummy called"+repo1.findByScope("read"));
+		System.out.println("Dummy called");
 		
-		return repo1.findByScope("read").toString();
+		return "Dummy response";
 	}
     
     /*
