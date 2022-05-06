@@ -147,40 +147,4 @@ public class AuthServerController {
 
 		return ccfService.processFlow(client_id, client_secret, audience, scopes);
 	}
-
-	// Token Introspection Endpoint
-	// https://www.oauth.com/oauth2-servers/token-introspection-endpoint/
-	// https://datatracker.ietf.org/doc/html/rfc7662 
-	@PostMapping(value = "/token_info",
-				produces = MediaType.APPLICATION_JSON_VALUE,
-				consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE
-				)
-	public TokenIntrospectionResponse tokenIntrospect(
-		//@RequestBody won't recognize application/x-www-form-urlencoded
-		TokenRequest token,
-		@RequestHeader("Authorization") String bearerToken 
-			//to keep endpoint secure we can use Basic auth also as long as the endpoint is kept secured
-			// here for now keeping Bearer token
-	) {
-
-		/*
-			POST /introspect HTTP/1.1
-			Host: server.example.com
-			Accept: application/json
-			Content-Type: application/x-www-form-urlencoded
-			Authorization: Bearer 23410913-abewfq.123483
-
-			token=2YotnFZFEjr1zCsicMWpAA
-		*/
-
-		TokenIntrospectionResponse tir = new TokenIntrospectionResponse(
-			"active",
-			"scope",
-			"client_id",
-			"username",
-			"exp"
-		);
-
-		return tir;
-	}
 }
