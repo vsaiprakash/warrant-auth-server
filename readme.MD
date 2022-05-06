@@ -57,6 +57,11 @@ Pragma: no-cache
 
 ## Client Credentials Flow
 
+![image](https://user-images.githubusercontent.com/9028439/167161159-c2e74391-19c3-4bdf-835b-01b7cca5e6b7.png)
+Resource:
+https://auth0.com/docs/get-started/authentication-and-authorization-flow/client-credentials-flow
+https://images.ctfassets.net/cdy7uua7fh8z/2waLvaQdM5Fl5ZN5xUrF2F/8c5ddae68ac8dd438cdeb91fe1010fd1/auth-sequence-client-credentials.png
+
 Step 1:
     Client App -> Auth Server
 POST /token HTTP/1.1
