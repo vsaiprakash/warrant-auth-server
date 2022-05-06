@@ -49,13 +49,6 @@ public class IntrospectionController {
 
 			token=2YotnFZFEjr1zCsicMWpAA
 		*/
-		TokenIntrospectionResponse tir = new TokenIntrospectionResponse(
-			"active",
-			"scope",
-			"client_id",
-			"username",
-			"exp"
-		);
-		return tir;
+		return ccfService.tokenInfo(token);
 	}
 }

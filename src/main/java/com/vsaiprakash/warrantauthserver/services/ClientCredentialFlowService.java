@@ -1,6 +1,8 @@
 package com.vsaiprakash.warrantauthserver.services;
 
+import com.vsaiprakash.warrantauthserver.model.requestmodels.TokenRequest;
 import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialResponse;
+import com.vsaiprakash.warrantauthserver.model.responsemodels.TokenIntrospectionResponse;
 import com.vsaiprakash.warrantauthserver.dao.OAuthClientRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +30,21 @@ public class ClientCredentialFlowService {
 			tokenGenerated,
 			"Bearer",
 			expireTime
+		);
+    }
+
+    public TokenIntrospectionResponse tokenInfo(TokenRequest token){
+
+        //validate whether token is available in database
+        // if so, get its corresponding status, scope, client_id, username, token expiry timestamp
+        //   and return the data
+
+        return new TokenIntrospectionResponse(
+			"active",
+			"scope",
+			"client_id",
+			"username",
+			"exp"
 		);
     }
 }
