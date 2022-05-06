@@ -23,8 +23,12 @@ public class ClientCredentialFlowService {
         //generate a token and update it in DB of app scope table for ref
         final String tokenGenerated = "abc";
 
+        //save the generated token in db
+
         //enforce the token expiry somehow ? for know take it as fixed
         final int expireTime = 3600; //3600 seconds ie., 60x60 1hour
+
+        //save the expiry timestamp in db
 
         return new ClientCredentialResponse(
 			tokenGenerated,
@@ -36,7 +40,8 @@ public class ClientCredentialFlowService {
     public TokenIntrospectionResponse tokenInfo(TokenRequest token){
 
         //validate whether token is available in database
-        // if so, get its corresponding status, scope, client_id, username, token expiry timestamp
+        // if so, get its corresponding 
+        //    status, scope, client_id, username, token expiry timestamp from db
         //   and return the data
 
         return new TokenIntrospectionResponse(
