@@ -158,7 +158,9 @@ public class AuthServerController {
 	public TokenIntrospectionResponse tokenIntrospect(
 		//@RequestBody won't recognize application/x-www-form-urlencoded
 		TokenRequest token,
-		@RequestHeader("Authorization") String bearerToken //to keep endpoint secure
+		@RequestHeader("Authorization") String bearerToken 
+			//to keep endpoint secure we can use Basic auth also as long as the endpoint is kept secured
+			// here for now keeping Bearer token
 	) {
 
 		/*

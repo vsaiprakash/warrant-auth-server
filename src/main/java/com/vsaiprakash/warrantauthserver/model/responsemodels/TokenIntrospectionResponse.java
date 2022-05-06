@@ -1,5 +1,20 @@
 package com.vsaiprakash.warrantauthserver.model.responsemodels;
 
+/*
+
+    HTTP/1.1 200 OK
+    Content-Type: application/json; charset=utf-8
+    
+    {
+        "active": true,
+        "scope": "read write email",
+        "client_id": "J8NFmU4tJVgDxKaJFmXTWvaHO",
+        "username": "aaronpk",
+        "exp": 1437275311
+    }
+
+*/
+
 public class TokenIntrospectionResponse {
     public String active;
     public String scope;
