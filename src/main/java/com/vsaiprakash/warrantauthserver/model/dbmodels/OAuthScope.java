@@ -1,4 +1,4 @@
-package com.vsaiprakash.warrantauthserver.model.dbmodels;
+package com.vukkumsp.warrantauthserver.model.dbmodels;
 
 import javax.persistence.Entity;
 // import javax.persistence.GeneratedValue;

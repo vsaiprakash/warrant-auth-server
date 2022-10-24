@@ -17,20 +17,8 @@ import com.vukkumsp.warrantauthserver.model.dbmodels.OAuthClient;
         Mobile app
 */
 
-public interface OAuthClientRepository extends CrudRepository<OAuthClient, String> {
-    //Connect with DB for App details
-    /*
-            String appName, [no spaces, only small letters, hypens, UNIQUE in table like an ID]
-            String appHomeUrl,
-            String appDescription,
-            String appPrivacyPolicyLink,
-            String redirectUrlLink,
-            Encrypted String ClientId,
-            Encrypted String ClientSecret,
-            String GrantTypeSupported = "client_credentials" [FIXED]
-    */
+public interface OAuthAccessTokensRepo extends CrudRepository<OAuthClient, String> {
 
-    
   List<OAuthClient> findByScope(String scope);
 
   Optional<OAuthClient> findById(String id);

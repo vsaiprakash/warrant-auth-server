@@ -1,4 +1,4 @@
-package com.vsaiprakash.warrantauthserver.model.requestmodels;
+package com.vukkumsp.warrantauthserver.model.requestmodels;
 
 public class TokenRequest {
     public String token;

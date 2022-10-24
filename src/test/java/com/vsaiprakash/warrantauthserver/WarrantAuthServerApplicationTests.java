@@ -1,4 +1,4 @@
-package com.vsaiprakash.warrantauthserver;
+package com.vukkumsp.warrantauthserver;
 
 // import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

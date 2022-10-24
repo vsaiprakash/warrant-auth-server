@@ -1,6 +1,6 @@
-package com.vsaiprakash.warrantauthserver.data;
+package com.vukkumsp.warrantauthserver.data;
 
-import com.vsaiprakash.warrantauthserver.model.dbmodels.OAuthClient;
+import com.vukkumsp.warrantauthserver.model.dbmodels.OAuthClient;
 
 // CREATE TABLE oauth_clients (
 //   client_id             VARCHAR(80)   NOT NULL,

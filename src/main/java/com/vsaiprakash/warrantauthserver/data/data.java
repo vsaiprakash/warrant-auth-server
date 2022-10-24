@@ -1,4 +1,4 @@
-package com.vsaiprakash.warrantauthserver.data;
+package com.vukkumsp.warrantauthserver.data;
 
 // CREATE TABLE oauth_access_tokens (
 //   access_token         VARCHAR(40)    NOT NULL,

@@ -1,4 +1,4 @@
-package com.vsaiprakash.warrantauthserver.model.responsemodels;
+package com.vukkumsp.warrantauthserver.model.responsemodels;
 
 public class ClientCredentialResponse {
 

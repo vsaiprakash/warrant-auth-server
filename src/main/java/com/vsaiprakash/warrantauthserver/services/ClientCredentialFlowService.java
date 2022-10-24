@@ -1,9 +1,9 @@
-package com.vsaiprakash.warrantauthserver.services;
+package com.vukkumsp.warrantauthserver.services;
 
-import com.vsaiprakash.warrantauthserver.model.requestmodels.TokenRequest;
-import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialResponse;
-import com.vsaiprakash.warrantauthserver.model.responsemodels.TokenIntrospectionResponse;
-import com.vsaiprakash.warrantauthserver.dao.OAuthClientRepository;
+import com.vukkumsp.warrantauthserver.model.requestmodels.TokenRequest;
+import com.vukkumsp.warrantauthserver.model.responsemodels.ClientCredentialResponse;
+import com.vukkumsp.warrantauthserver.model.responsemodels.TokenIntrospectionResponse;
+import com.vukkumsp.warrantauthserver.dao.OAuthClientRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

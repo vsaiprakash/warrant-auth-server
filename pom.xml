@@ -8,7 +8,7 @@
 		<version>2.5.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.vsaiprakash</groupId>
+	<groupId>com.vukkumsp</groupId>
 	<artifactId>warrant-auth-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>warrant-auth-server</name>

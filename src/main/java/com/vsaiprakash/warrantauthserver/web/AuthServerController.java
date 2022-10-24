@@ -1,4 +1,4 @@
-package com.vsaiprakash.warrantauthserver.web;
+package com.vukkumsp.warrantauthserver.web;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,8 +11,8 @@ import org.springframework.web.util.UriComponentsBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 
-import com.vsaiprakash.warrantauthserver.model.responsemodels.ClientCredentialResponse;
-import com.vsaiprakash.warrantauthserver.services.ClientCredentialFlowService;
+import com.vukkumsp.warrantauthserver.model.responsemodels.ClientCredentialResponse;
+import com.vukkumsp.warrantauthserver.services.ClientCredentialFlowService;
 
 @RestController
 @RequestMapping("/v1/oauth")
